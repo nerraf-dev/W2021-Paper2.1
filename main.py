@@ -58,10 +58,10 @@ while runBookings:
   f"""Opt  | Time    |  #Courts """)
   print(availMsg)
   print("-"*30)
-  for i in range(0, NUM_OF_COURTS):    #O/L: iterate courts
+  for i in range(0, len(times)):    #O/L: iterate courts
     free = 0
-    for j in range(0,len(times)):  #I/L: 
-      if courts[i][0][j] == False:
+    for j in range(0,NUM_OF_COURTS):  #I/L: 
+      if courts[j][0][i] == False:
         a = i+1
         free += 1
     print(f"{a if a == 10 else ' '+str(a)}   | {times[i]}   | {free}")
