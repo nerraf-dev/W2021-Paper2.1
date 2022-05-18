@@ -79,4 +79,5 @@ while runBookings:
     time.sleep(1)
     print("*** SHUTDOWN COMPLETE ***")
   else:
+    #Task 2
     pass    #Pass is used to help run empty loops and selection blocks
