@@ -39,9 +39,9 @@ print("""*** WELCOME TO BSM HOLIDAY PARK ***
  --- SQUASH COURT BOOKING SYSTEM ---
       """)
 print(f"Today is {dayTime['day']} {date.day} {date.strftime('%B')} {date.year}")
-print(f"The time is {dayTime['hour']}:{dayTime['minute']}")
+print(f"The time is {dayTime['hour']}:{dayTime['minute']}\n")
 
-availMsg = (f"""The following times are available:\n"""
+availMsg = (f"""The following times are available:\n\n"""
 f"""Opt  | Time    |  #Courts """)
 print(availMsg)
 print("-"*30)
