@@ -58,18 +58,16 @@ while runBookings:
   f"""Opt  | Time    |  #Courts """)
   print(availMsg)
   print("-"*30)
-  for i in range(0, len(times)):    #O/L: iterate courts
+  for i in range(0, len(times)):    #O/L: loop number of sessions (1-10)
     free = 0
-    for j in range(0,NUM_OF_COURTS):  #I/L: 
-      for k in range(0,len(times)):
-        if courts[j][0][k] == False:
-          a = i+1
-          free += 1
+    for j in range(0,NUM_OF_COURTS):  #I/L: Loop the courts
+      #[j] gets the list element for the court
+      #[0] is the 'booked' list for the slot
+      #[i] is the timeslot 0 = 08:00, 7 = 17:00
+      if courts[j][0][i] == False:    #Use IL iterator to get court booked value
+        a = i+1
+        free += 1
     print(f"{a if a == 10 else ' '+str(a)}   | {times[i]}   | {free}")
-      
-    # if booked[i] == False:
-    #   a = i+1
-    #   print(f"{a if a == 10 else ' '+str(a)}   | {times[i]}   | num")
   
   print()
   print("To make a booking enter the option number for your chosen time:")
